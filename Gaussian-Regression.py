@@ -46,6 +46,6 @@ for i,size in enumerate(sizes):
     pol_reg_acc.fit(X_train,y_train)
     
     y_predicted = pol_reg_acc.predict(X_test)
-    acc = mean_squared_error(y_test,y_predicted)
-    print("Accuracy %.3f"%(acc*100))
+    mse = mean_squared_error(y_test,y_predicted)
+    print("MSE  %.9f"%(mse))
     plt.show()
